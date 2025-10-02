@@ -42,7 +42,7 @@ Projeto desenvolvido com foco em responsividade e experiência do usuário.
 
 - HTML5, CSS3, JavaScript
 - PHP (back-end e painel administrativo)
-- MySQL/MariaDB
+- MySQL
 - Responsividade mobile-first
 
 ---
