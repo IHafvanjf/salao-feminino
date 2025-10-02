@@ -49,7 +49,7 @@ Projeto desenvolvido com foco em responsividade e experiência do usuário.
 
 ## 🔗 Demonstração Online
 
- [Acesse aqui](https://peru-tiger-506075.hostingersite.com)
+<a href="https://peru-tiger-506075.hostingersite.com" target="_blank">Acesse aqui</a>
 
 ---
 
