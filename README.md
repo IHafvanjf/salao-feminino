@@ -21,20 +21,15 @@ Projeto desenvolvido com foco em responsividade e experiência do usuário.
 
 ---
 
-## 🖼️ Preview
+## Preview
 
-### Página inicial
-<img src="prints/print1.png" width="300">
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36a10611-aee4-4590-86ea-f396fbd75c05" width="300">
+  <img src="https://github.com/user-attachments/assets/5f791e2a-00f6-40d9-92f3-7090b0c25e0b" width="300">
+  <img src="https://github.com/user-attachments/assets/7d6cf704-5aab-411c-8ea5-287ad2d28829" width="300">
+  <img src="https://github.com/user-attachments/assets/85931008-5542-4323-b028-c4c7d72348ed" width="300">
+</p>
 
-### Resultados de clientes e avaliações
-<img src="prints/print2.png" width="300">
-
-### Seleção de serviços e calendário de agendamento
-<img src="prints/print3.png" width="300">
-<img src="prints/print4.png" width="300">
-
-### Loja de produtos com carrinho
-<img src="prints/print5.png" width="300">
 
 ---
 
