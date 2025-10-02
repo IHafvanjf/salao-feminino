@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão de beleza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <!-- Centralizando a logo -->
+            <a class="navbar-brand mx-auto" href="#">Salão de Beleza</a>
+
+            <!-- Botão para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-house-door"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./agendamento/index.php"><i class="bi bi-calendar-check"></i> Agendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sobre/index.php"><i class="bi bi-info-circle"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./produtos/index.php"><i class="bi bi-bag"></i> Produtos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('./img/estabelecimento1.jpg');">
+                <div class="carousel-caption">
+                    <h2 class="animated fadeInLeft">Primeira Imagem</h2>
+                    <p class="animated fadeInUp">Descrição da primeira imagem.</p>
+                    <p class="animated fadeInUp"><a href="./agendamento/index.php" class="btn btn-transparent btn-rounded btn-large">Agendar</a></p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./img/estabelecimento2.jpg');">
+                <div class="carousel-caption">
+                    <h2 class="animated fadeInDown">Segunda Imagem</h2>
+                    <p class="animated fadeInUp">Descrição da segunda imagem.</p>
+                    <p class="animated fadeInUp"><a href="./agendamento/index.php" class="btn btn-transparent btn-rounded btn-large">Agendar</a></p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./img/estabelecimento3.jpg');">
+                <div class="carousel-caption">
+                    <h2 class="animated fadeInRight">Terceira Imagem</h2>
+                    <p class="animated fadeInRight">Descrição da terceira imagem.</p>
+                    <p class="animated fadeInRight"><a href="./agendamento/index.php" class="btn btn-transparent btn-rounded btn-large">Agendar</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </a>
+    </div>
+
+    <!-- Início cards (pacotes) -->
+    <h1 class="tituloPacotes">Nossos pacotes de serviços</h1>
+    <div class="cards-wrapper">
+        <div class="card-column column-0">
+            <!-- Card Cuidados Capilares -->
+            <div class="card card-color-0">
+                <div class="border"></div>
+                <img src="img/imgPacote1.jpg" alt="Imagem 1">
+                <h1>Transforme Seu Cabelo</h1>
+                <ul>
+                    <li>Cortes modernos e personalizados</li>
+                    <li>Escovas, penteados e finalizações</li>
+                    <li>Tratamentos de hidratação e nutrição</li>
+                    <li>Reconstrução capilar e blindagem dos fios</li>
+                </ul>
+                <a href="./agendamento/index.php" class="btn-agendar">Agendar Agora</a>
+            </div>
+
+            <!-- Card Coloração -->
+            <div class="card card-color-2">
+                <div class="border"></div>
+                <img src="img/imgPacote2.jpg" alt="Imagem 2">
+                <h1>Cores Vibrantes, Estilo Único!</h1>
+                <ul>
+                    <li>Técnicas modernas: Mechas, Ombré, Balayage</li>
+                    <li>Coloração sem danos: Produtos de alta qualidade</li>
+                    <li>Retoque de raiz e cobertura de fios brancos</li>
+                    <li>Tonalizações e correções de cor</li>
+                </ul>
+                <a href="./agendamento/index.php" class="btn-agendar">Agendar Agora</a>
+            </div>
+        </div>
+
+        <div class="card-column column-1">
+            <!-- Card Cuidados com a Pele -->
+            <div class="card card-color-1">
+                <div class="border"></div>
+                <img src="img/imgPacote4.jpeg" alt="Imagem 4">
+                <h1>Pele Saudável, Beleza Natural</h1>
+                <ul>
+                    <li>Limpeza de pele profunda e hidratação</li>
+                    <li>Tratamentos anti-idade e rejuvenescimento</li>
+                    <li>Peeling facial para renovação celular</li>
+                    <li>Máscaras revitalizantes para todos os tipos de pele</li>
+                </ul>
+                <a href="./agendamento/index.php" class="btn-agendar">Agendar Agora</a>
+            </div>
+
+            <!-- Card Unhas -->
+            <div class="card card-color-3">
+                <div class="border"></div>
+                <img src="img/imgPacote3.jpg" alt="Imagem 3">
+                <h1>Unhas Impecáveis</h1>
+                <ul>
+                    <li>Manicure e pedicure tradicional e spa</li>
+                    <li>Alongamento em gel, fibra e acrílico</li>
+                    <li>Nail art criativa e personalizada</li>
+                    <li>Esmaltação em gel com longa duração</li>
+                </ul>
+                <a href="./agendamento/index.php" class="btn-agendar">Agendar Agora</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- inicio carrosel clientes -->
+    <h1 class="tituloResultados">Resultado das Clientes</h1>
+
+    <div class="carrosel">
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 1</div>
+                <img src="img/cabelo1.jpg" alt="Imagem de Cabelo 1" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 2</div>
+                <img src="img/cabelo2.jpg" alt="Imagem de Cabelo 2" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 3</div>
+                <img src="img/cabelo3.jpeg" alt="Imagem de Cabelo 3" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 4</div>
+                <img src="img/cabelo4.jpeg" alt="Imagem de Cabelo 4" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 5</div>
+                <img src="img/cabelo5.jpeg" alt="Imagem de Cabelo 5" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 6</div>
+                <img src="img/cabelo6.jpeg" alt="Imagem de Cabelo 6" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 7</div>
+                <img src="img/cabelo7.jpeg" alt="Imagem de Cabelo 7" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 8</div>
+                <img src="img/cabelo8.jpeg" alt="Imagem de Cabelo 8" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 9</div>
+                <img src="img/cabelo9.jpeg" alt="Imagem de Cabelo 9" />
+            </div>
+        </div>
+
+        <div class="carroselClientes">
+            <div class="carousel-box">
+                <div class="title">Cliente 10</div>
+                <img src="img/cabelo10.png" alt="Imagem de Cabelo 10" />
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- inicio comentarios -->
+    <h1 class="tituloClientes">Avaliações de nossos clientes</h1>
+    <div class="reviews-container">
+        <div class="cardies">
+            <div class="stars">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="infos">
+                <p class="date-time">2 dias atrás</p>
+                <p class="description">
+                    Fiquei impressionada com a qualidade do atendimento! A equipe foi super atenciosa e entendeu exatamente o que eu queria. Além disso, o ambiente é aconchegante, muito bem organizado e moderno. Com certeza voltarei sempre! </p>
+            </div>
+            <div class="author">— Geovana</div>
+        </div>
+        <div class="cardies">
+            <div class="stars">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="infos">
+                <p class="date-time">5 dias atrás</p>
+                <p class="description">
+                    As profissionais são extremamente qualificadas e demonstram muito cuidado em cada detalhe. O atendimento foi impecável, me senti muito bem recebida e valorizada. Recomendo a todas que buscam um serviço de excelência! </p>
+            </div>
+            <div class="author">— Cybelle</div>
+        </div>
+        <!-- Adicione mais avaliações aqui -->
+
+        <div class="cardies">
+            <div class="stars">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="infos">
+                <p class="date-time">
+                    3 dias atrás
+                </p>
+                <p class="description">
+                    O espaço é incrível, bem decorado e super confortável. O atendimento é diferenciado, com profissionais atenciosas e muito experientes. Meu cabelo ficou exatamente do jeito que eu queria! Sem dúvida, o melhor salão da região! </p>
+            </div>
+
+            <div class="author">
+                — Gabriela
+            </div>
+        </div>
+
+    </div>
+    <!-- Fim comentarios -->
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Encontre-nos</h4>
+                                <span>Belo Horizonte - MG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Telefone</h4>
+                                <span>3199794-1735</span><br>
+                                <span>3198730-5141</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Email</h4>
+                                <span>techinnova01@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a><img src="./img/logoAlltech.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>A AllTech é a revolução digital que sua empresa precisa! Especialistas em desenvolvimento de sites e aplicações web, transformamos ideias em experiências digitais envolventes, escaláveis e de alto desempenho. Seja para fortalecer sua presença online, aumentar suas conversões ou oferecer uma experiência digital impecável, criamos soluções sob medida para o seu negócio.</p>  
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Serviços</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Desenvolvimento de Sites</a></li>
+                            <li><a href="#">Aplicações Web</a></li>
+                            <li><a href="#">E-commerce</a></li>
+                            <li><a href="#">Otimização de SEO</a></li>
+                            <li><a href="#">Manutenção e Suporte</a></li>
+                            <li><a href="#">Integração de APIs</a></li>
+                            <li><a href="#">Sistemas Personalizados</a></li>
+                            <li><a href="#">UX/UI Design</a></li>
+                        </ul>
+                    </div>                 
+                </div>
+
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+    <div class="footer-widget">
+        <div class="footer-widget-heading">
+            <h3>Fale Conosco</h3>
+        </div>
+        <div class="footer-text mb-25">
+            <p>Precisa de um orçamento ou tem alguma dúvida? Fale conosco agora pelo WhatsApp!</p>
+        </div>
+        <div class="whatsapp-btn">
+            <a href="https://wa.me/31997941735" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2025, Todos os direitos reservados, AllTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

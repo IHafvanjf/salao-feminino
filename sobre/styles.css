@@ -1,0 +1,226 @@
+/* Base */
+body {
+  overflow-x: hidden;
+  background-color: #F4C2C2;
+}
+
+/* Navbar */
+.navbar {
+  padding: 40px 0;
+  background-color: #D7B899;
+  margin-bottom: 0;
+  height: 120px;
+  z-index: 10000;
+}
+
+/* Conteúdo da navbar (mobile/desktop) */
+.navbar-collapse {
+  background-color: #D7B899;
+  padding: 20px;
+  width: 100%;
+}
+.navbar-collapse.show {
+  background-color: #D7B899;
+  border-radius: 0;
+  width: 100%;
+}
+
+/* Links de navegação */
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar-nav .nav-link {
+  font-size: 20px;
+  color: white;
+}
+.navbar-nav .nav-link i {
+  font-size: 14px;
+  margin-right: 5px;
+  color: white;
+}
+
+/* Botão hamburguer */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 30px;
+}
+.navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Navbar responsiva */
+@media (max-width: 768px) {
+  .navbar { height: auto; }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #D7B899;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+/* Hero com imagem de fundo */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url('../img/estabelecimentoSobre.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* Overlay escuro do hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+/* Conteúdo do hero */
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  border-radius: 10px;
+  color: white;
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.hero .btn {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+/* Cards da seção "Sobre" */
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 0;
+}
+/* Card individual */
+.about-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1000px;
+  height: 330px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+}
+/* Imagem do card */
+.about-card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+/* Texto do card */
+.about-card p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Bloco de texto com título */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+.about-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #D7B899;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+/* Ajuste específico de imagem */
+#imgCard2 { width: 46vh; }
+
+/* Responsivo: mobile (cards/hero) */
+@media (max-width: 768px) {
+  .hero { height: 60vh; padding: 20px; }
+  .hero-overlay { max-width: 90%; padding: 30px; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+
+  .about-cards { padding: 30px 15px; }
+  .about-card {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .about-card img {
+    width: 80%;
+    height: auto;
+    margin: 0 0 15px 0;
+  }
+  .about-card.reverse { flex-direction: column-reverse; }
+  .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .about-text h2 { font-size: 1.5rem; }
+  .about-text p { font-size: 1rem; line-height: 1.4; }
+}
+
+/* Responsivo: tablets/laptops */
+@media (max-width: 1024px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  .about-card img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 0 15px 0;
+  }
+  .about-card.reverse { flex-direction: column-reverse; }
+  .about-text { max-width: 100%; text-align: center; }
+  .about-text h2 { font-size: 1.6rem; }
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 15px;
+  }
+}

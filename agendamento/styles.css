@@ -1,0 +1,432 @@
+/* Base da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4C2C2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container principal do fluxo */
+.container {
+  width: 550px;
+  padding: 20px;
+  background-color: #D7B899;
+  color: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgb(4,4,4), -5px -5px 30px rgb(57,57,57);
+  z-index: 1;
+}
+
+/* Botão Voltar ao início */
+.home-btn-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.home-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #fa6ef3;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+.home-btn:hover {
+  background-color: #f759f7;
+}
+
+/* Input com label flutuante */
+.form-control {
+  position: relative;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 300px;
+}
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+.form-control input::placeholder { color: transparent; }
+.form-control label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ffffff;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.form-control label span {
+  display: inline-block;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.form-control input:focus + label span,
+.form-control input:not(:placeholder-shown) + label span {
+  color: #ffffff;
+  transform: translateY(-25px);
+  font-size: 12px;
+  opacity: 1;
+}
+
+/* Grade de serviços (cards) */
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.service-card {
+  width: 100%;
+  height: 180px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.service-card span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.service-card.selected img { opacity: 0.4; }
+.selected-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+}
+.service-card.selected .selected-text { display: block; }
+
+/* Calendário */
+.calendar-container {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.calendar-header button:hover {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+.day {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.day:hover { background-color: #444; }
+.day.selected {
+  background-color: green !important;
+  color: white !important;
+  border-radius: 5px;
+}
+.today {
+  background-color: #F4C2C2 !important;
+  font-weight: bold;
+}
+
+/* Tabela de horários */
+.schedule-container {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.time-btn {
+  background-color: #F4C2C2;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+.time-btn:hover { background-color: #F4C2C2; }
+.time-btn.selected { background-color: green !important; }
+
+/* Etapas do fluxo */
+#step2 { height: 50vh; }
+.step { display: none; }
+.step.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Seleção de profissional (cards) */
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.card {
+  width: 180px;
+  height: 220px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.card:hover img { opacity: 1; }
+.card span {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(0,0,0,0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Inputs e botões */
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  background-color: #fa6ef3;
+  color: white;
+  cursor: pointer;
+  max-width: 15vh;
+}
+button:hover { background-color: #f759f7; }
+
+/* Modal de confirmação */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.modal.show { display: block; }
+
+/* Botão de voltar entre etapas */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.back-btn::before {
+  content: "← Voltar";
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.back-btn:hover::before { color: #aaa; }
+
+#voltarStep3 { margin-top: 1vh; }
+#tituloStep3 { margin-top: 6vh; }
+
+/* Ajustes responsivos essenciais */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #D7B899;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 100%;
+    position: absolute;
+    padding: 15px 0;
+  }
+  .home-btn { margin-top: -10px; }
+}
+
+/* Legenda do calendário/horários */
+.legend-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  font-size: 0.95rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+  border: 1px solid #555;
+}
+.legend-red { background-color: #e74c3c; }
+.legend-gray { background-color: #7f8c8d; }
+.legend-green { background-color: #e8b4b4; } /* disponível */
+.legend-available {
+  background-color: #f4c6c6;
+  border: 1px solid #c49d9d;
+}
+
+/* Estados de dia/horário */
+.day.blocked {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: auto; /* permite alert ao clicar */
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  opacity: 0.7;
+}
+.day.blocked:hover { background-color: #bbb; }
+.day.blocked[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  top: -30px;
+  white-space: nowrap;
+}
+
+/* Ocupados / conflito / selecionado */
+.occupied-red {
+  background-color: #e74c3c;
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+.occupied-gray {
+  background-color: #7f8c8d;
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+.time-btn.selected {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #27ae60;
+}
+
+/* Hover geral dos horários */
+.time-btn {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 80px;
+  transition: all 0.2s ease-in-out;
+}
+.time-btn:hover:not(:disabled):not(.occupied) {
+  background-color: #eee;
+  cursor: pointer;
+}

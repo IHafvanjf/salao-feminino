@@ -1,0 +1,149 @@
+body {
+    background-color: #F4C2C2;
+  }
+  
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  th, td {
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    #nav-buttons {
+      flex-direction: row;
+      gap: 10px;
+    }
+  
+    #calendar-agendamento,
+    .schedule-table {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .daysList {
+      display: flex;
+      overflow-x: auto;
+      gap: 5px;
+    }
+  
+    .daysList button {
+      flex: 0 0 auto;
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .schedule-table h2 {
+      font-size: 18px;
+    }
+  
+    .schedule-table button {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    #calendar-agendamento table {
+      width: 100%;
+      min-width: 300px;
+    }
+  
+    #calendar-agendamento th,
+    #calendar-agendamento td {
+      font-size: 12px;
+    }
+  
+    #calendar-agendamento td:last-child {
+      text-align: right;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .daysList button {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    th, td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    .schedule-table h2 {
+      font-size: 16px;
+    }
+  
+    #calendar-agendamento table {
+      width: 100%;
+      min-width: 200px;
+    }
+  
+    #calendar-agendamento th,
+    #calendar-agendamento td {
+      font-size: 12px;
+    }
+  
+    #calendar-agendamento td:last-child {
+      text-align: right;
+      padding-right: 10px;
+    }
+  
+    #calendar-agendamento td {
+      max-width: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    #calendar-agendamento img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    #calendar-agendamento th:nth-child(4),
+    #calendar-agendamento td:nth-child(4) {
+      text-align: center;
+      min-width: 60px;
+    }
+  }
+  
+  body {
+    background-color: #F4C2C2;
+  }
+  
+  th, td {
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .daysList {
+      overflow-x: auto;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    th, td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  #modal-bloquear,
+#modal-desbloquear {
+  z-index: 50;
+}

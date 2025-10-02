@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel - Agendamento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen py-4 flex flex-col items-center">
+
+  <!-- Botões para bloquear e desbloquear -->
+  <div class="w-full max-w-5xl p-4 bg-white shadow-lg rounded-lg mb-4 flex justify-end space-x-4">
+    <button onclick="abrirModalBloquear()" class="bg-red-500 text-white px-4 py-2 rounded">
+      Bloquear Dias
+    </button>
+    <button onclick="abrirModalDesbloquear()" class="bg-blue-500 text-white px-4 py-2 rounded">
+      Desbloquear Dias
+    </button>
+  </div>
+
+<!-- Modal para Bloquear Dias -->
+<div id="modal-bloquear" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white p-4 rounded-lg w-full max-w-md">
+    <h2 class="text-xl font-bold mb-4">Selecione os Dias para Bloquear</h2>
+    <div class="flex justify-between items-center mb-4">
+      <button onclick="alterarMesModal(-1, 'bloquear')" class="px-2 text-xl">◀</button>
+      <span id="mesModalBloquear" class="font-semibold text-lg"></span>
+      <button onclick="alterarMesModal(1, 'bloquear')" class="px-2 text-xl">▶</button>
+    </div>
+    
+    <div class="calendar-block grid grid-cols-7 gap-2 mb-4"></div>
+    <div class="flex justify-end">
+      <button onclick="fecharModalBloquear()" class="mr-2 px-3 py-1 border rounded">Cancelar</button>
+      <button onclick="confirmarBloqueio()" class="bg-green-500 text-white px-3 py-1 rounded">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Desbloquear Dias -->
+<div id="modal-desbloquear" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white p-4 rounded-lg w-full max-w-md">
+    <h2 class="text-xl font-bold mb-4">Selecione os Dias para Desbloquear</h2>
+    <div class="flex justify-between items-center mb-4">
+      <button onclick="alterarMesModal(-1, 'desbloquear')" class="px-2 text-xl">◀</button>
+      <span id="mesModalDesbloquear" class="font-semibold text-lg"></span>
+      <button onclick="alterarMesModal(1, 'desbloquear')" class="px-2 text-xl">▶</button>
+    </div>
+    
+    <div class="calendar-unblock grid grid-cols-7 gap-2 mb-4"></div>
+    <div class="flex justify-end">
+      <button onclick="fecharModalDesbloquear()" class="mr-2 px-3 py-1 border rounded">Cancelar</button>
+      <button onclick="confirmarDesbloqueio()" class="bg-green-500 text-white px-3 py-1 rounded">Confirmar</button>
+    </div>
+  </div>
+</div>
+  <div id="calendar-agendamento" class="w-full max-w-5xl p-4 rounded-lg mb-2 bg-white shadow-lg">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center text-xl font-bold mb-2">
+        <button class="prevMonth text-gray-700 hover:text-gray-900 text-2xl px-3" onclick="changeMonth(-1)">&lt;</button>
+        <span class="monthName mx-4">Março</span>
+        <button class="nextMonth text-gray-700 hover:text-gray-900 text-2xl px-3" onclick="changeMonth(1)">&gt;</button>
+      </div>
+      <div class="relative w-full overflow-x-auto whitespace-nowrap border rounded-lg p-2 bg-gray-100">
+        <div class="daysList flex space-x-2 px-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="schedule-table" class="schedule-table w-full max-w-5xl p-4 bg-white shadow-lg rounded-lg">
+    <h2 class="text-xl font-bold mb-4" id="tituloAgendamento">Agendamentos</h2>
+    <div class="table-container overflow-x-auto">
+      <table class="min-w-full text-left">
+        <thead>
+          <tr class="bg-gray-200">
+            <th>Nome</th>
+            <th>Horário</th>
+            <th>Telefone</th>
+            <th>Serviços</th>
+            <th>Duração</th>
+            <th>Excluir</th >
+          </tr>
+        </thead>
+        <tbody id="agendamentosBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
