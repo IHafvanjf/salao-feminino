@@ -4,6 +4,8 @@ Aplicação web completa para gestão de salão de beleza feminino.
 Inclui vitrine de produtos, carrinho de compras, agendamento online, painel administrativo e área institucional.  
 Projeto desenvolvido com foco em responsividade e experiência do usuário.
 
+> Projeto de demonstração — desenvolvido apenas para fins de estudo e portfólio. Não representa um sistema comercial ativo.
+
 ---
 
 ## Funcionalidades
