@@ -1,5 +1,7 @@
 # Sistema Web - Salão de Beleza Feminino
 
+**Última revisão:** 02-2025
+
 Aplicação web completa para gestão de salão de beleza feminino.  
 Inclui vitrine de produtos, carrinho de compras, agendamento online, painel administrativo e área institucional.  
 Projeto desenvolvido com foco em responsividade e experiência do usuário.
