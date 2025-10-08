@@ -52,6 +52,8 @@ Projeto desenvolvido com foco em responsividade e experiência do usuário.
 
 ---
 
-##  Licença
+## Licença
+Este repositório é disponibilizado para visualização e avaliação de portfólio.
+É proibido copiar, modificar, distribuir ou utilizar o código em produção ou para fins comerciais sem autorização por escrito.
+Consulte o arquivo LICENSE para os termos completos.
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
